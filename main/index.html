@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワード入力</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="passwordForm">
+        <label for="passwordBoxes">パスワードを入力してください</label>
+        <div class="password-container" id="passwordBoxes">
+            <!-- パスワード入力ボックスがここに生成されます -->
+        </div>
+        <input type="submit" value="送信" id="submitBtn" onclick="submitPassword()">
+        <div id="errorMessage">パスワードが間違っています。</div>
+    </div>
+    <div id="timerContainer">
+        <div id="timer">60</div>
+    </div>
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="script.js"></script>
+</body>
+</html>
