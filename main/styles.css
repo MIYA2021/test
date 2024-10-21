@@ -17,15 +17,16 @@ body {
 }
 
 .password-box {
-    width: 50px;
-    height: 50px;
+    width: 50px;  /* 幅を狭く保つ */
+    height: 100px;  /* 高さを大きくして縦長にする */
     margin: 5px;
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
     border: 2px solid black;
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     ime-mode: active; /* 日本語入力のサポート */
+    line-height: 100px; /* 縦中央揃え */
 }
 
 #passwordForm {
@@ -77,4 +78,28 @@ label {
     margin-top: 10px;
     font-size: 16px;
     display: none;
+}
+
+/* iPadのランドスケープモードに対応 */
+@media only screen and (min-width: 810px) and (max-width: 1080px) {
+    body {
+        max-width: 810px; /* iPadのランドスケープモードに対応 */
+        margin: 0 auto;   /* 中央揃え */
+        padding: 20px;
+    }
+
+    .password-box {
+        width: 60px; /* ボックスのサイズを調整 */
+        height: 120px; /* 縦長に調整 */
+        font-size: 30px; /* フォントサイズも調整 */
+    }
+
+    #timer {
+        font-size: 80px; /* タイマーのフォントサイズをiPad向けに調整 */
+    }
+
+    #submitBtn {
+        font-size: 22px; /* ボタンのサイズも少し大きめに */
+        padding: 15px 30px;
+    }
 }
