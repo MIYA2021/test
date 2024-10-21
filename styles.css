@@ -21,7 +21,7 @@ body {
     height: 100px;  /* 高さを大きくして縦長にする */
     margin: 5px;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     border: 2px solid black;
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
