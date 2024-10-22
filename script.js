@@ -126,6 +126,8 @@ function submitPassword() {
 // パスワードが正しいかを確認する関数
 function onSuccess(isCorrect) {
     const errorMessage = document.getElementById('errorMessage');
+    const displayCharacters = document.getElementById('displayCharacters');
+    
     if (isCorrect) {
         // エラーメッセージを非表示にする
         errorMessage.style.display = 'none';
@@ -133,38 +135,12 @@ function onSuccess(isCorrect) {
         // パスワード入力欄を非表示にする
         document.getElementById('passwordForm').style.display = 'none';
 
-        // タイマーを表示する
-        document.getElementById('timerContainer').style.display = 'block';
-
-        // 3秒後にタイマーを開始
-        setTimeout(() => {
-            startTimer(60); // 60秒のタイマーを開始
-        }, 3000);
+        // displayCharactersに設定されたHTML要素を表示
+        displayCharacters.style.display = 'block'; // 表示
     } else {
         // エラーメッセージを表示する
         errorMessage.style.display = 'block';
     }
-}
-
-function startTimer(duration) {
-    const timerElement = document.getElementById('timer');
-    let remainingTime = duration;
-    const timerInterval = setInterval(() => {
-        const minutes = Math.floor(remainingTime / 60);
-        const seconds = remainingTime % 60;
-        timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-        remainingTime--;
-
-        if (remainingTime < 0) {
-            clearInterval(timerInterval);
-            playAlarm(); // タイマーが終了したらアラームを鳴らす
-        }
-    }, 1000);
-}
-
-function playAlarm() {
-    const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // アラーム音のURL
-    audio.play();
 }
 
 // 設定ファイルを読み込んで初期化
