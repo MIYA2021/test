@@ -47,20 +47,15 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-#timerContainer {
-    display: none;
+#displayCharacters{
+    margin-top: 20px;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
     text-align: center;
-}
-
-#timer {
-    font-size: 100px; /* 大きく表示 */
-    line-height: 1;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 10px;
+    letter-spacing: normal;
+    line-height: 5px;
+    -webkit-box-decration: clone;
 }
 
 label {
